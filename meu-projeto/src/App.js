@@ -1,11 +1,29 @@
-import logo from './logo.svg';
 import './App.css';
+import HelloWorld from './components/HelloWorld'
+import Frase from './components/Frase'
+import SayMyName from './components/SaymyName'
+import Pessoa from './components/Pessoa'
 
 function App() {
+
+const nome = 'Maria'
+
   return (
    <div className="App">
-     <h1>Olá React</h1>
-     <p>Meu Primeiro App</p>
+     <h2>Alterando o JSX</h2>
+     
+     <HelloWorld />
+     <Frase />
+     <SayMyName nome="Francisco"/>
+     <SayMyName nome="Catrine"/>
+     <SayMyName nome = {nome} />
+
+     <Pessoa 
+     nome="Francisco"
+     idade="22"
+     profisao="Programador"
+     foto='https://via.placeholder.com/150'
+     />
    </div>
   );
 }
